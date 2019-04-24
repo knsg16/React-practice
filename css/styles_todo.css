@@ -30,6 +30,11 @@ body {
     margin-left: 5px;
 }
 
+.container input[type="text"] {
+    padding: 2px;
+    margin-right: 5px;
+}
+
 .container li {
     line-height: 1.5;
 }
