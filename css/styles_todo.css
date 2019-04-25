@@ -35,6 +35,13 @@ body {
     margin-right: 5px;
 }
 
+h1 > span {
+    color: #ccc;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
 .container li {
     line-height: 1.5;
 }
