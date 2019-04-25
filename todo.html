@@ -161,8 +161,18 @@
                     });
                 }
 
+                componentDidUpdate() {
+                  localStorage.setItem('todos', JSON.stringify(this.state.todos));
+                }
 
-                render() {
+                componentDidMount() {
+                  this.setState({
+                    todos: JSON.parse(localStorage.getItem('todos')) || []
+                  });
+                }
+
+
+              render() {
                     return (
                       <div className="container">
                           <TodoHeader
