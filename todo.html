@@ -43,8 +43,8 @@
                                 checkTodo = {props.checkTodo}
                                 deleteTodo = {props.deleteTodo}
                       />
-                    )
-                })
+                    );
+                });
                 return (
                   <ul>
                       {props.todos.length ? todos : <li>Nothing to do</li>}
@@ -117,11 +117,13 @@
                         return { id: todo.id, title: todo.title, isDone: todo.isDone };
                     });
 
+                    // 何番目のisDoneを変更すればいいのかを調べる
+                    // idのみの配列を作って、indexOfで渡されたtodoのidと同じかどうか調べる
                     const pos = this.state.todos.map(todo => {
                         return todo.id;
                     }).indexOf(todo.id);
 
-                    todo[pos].isDone = !todos[pos].isDone;
+                    todos[pos].isDone = !todos[pos].isDone;
                     this.setState({
                         todos: todos
                     });
